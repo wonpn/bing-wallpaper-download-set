@@ -18,10 +18,7 @@ def downloadjpg(html):
 	jpgurlbegin = html.find("g_img={url: ")
 	jpgurlend = html.find("1920x1080.jpg\",id:")
 	jpgpathname = 'D:\\wallpaper\\'+time.strftime("%Y-%m-%d", time.localtime())+".jpg"
-	if jpgurlbegin == -1:
-		print ("匹配壁纸路径失败！")
-		return
-	elif os.path.isfile(jpgpathname):
+	if os.path.isfile(jpgpathname):
 		print ("已经存在壁纸："+jpgpathname)
 		return jpgpathname
 	else:
